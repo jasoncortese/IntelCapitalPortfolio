@@ -105,6 +105,7 @@ $(document).ready(function() {
 		$(document).trigger('startActivity');
 		var sent = app.project.model.bio.sendEmail({
 			id: this.memberid.value,
+			name: this.sender.value,
 			email: this.email.value,
 			message: escape(this.message.value)
 		});
