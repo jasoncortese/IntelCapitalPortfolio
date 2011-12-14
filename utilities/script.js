@@ -224,6 +224,7 @@ $(document).ready(function() {
 			var images = $('img[src$=png]');
 			for(var i=0; i < images.length; ++i) {
 				var image = images[i];
+				if (/companyLogos/.test(image.src)) continue;
 				image.lowsrc = image.src;
 				image.src = image.src.replace('.png', '@2x.png');
 				//image.width(image.width() / 2);

@@ -62,7 +62,7 @@
 				var promise = getPromise(serv, params);
 				if (!promise.isResolved() || !utilities.constants.useStorage) {
                     var paramString = '?callback=?';
-					for (x in params) paramString += '&' + x + '=' + params[x];
+					for (x in params) paramString += '&' + x + '=' + escape(params[x]);
 					var script = $.getJSON(url + paramString, function (json) {
 						//var json = $.parseJSON(json.responseText.split('<p>')[1].split('</p')[0])[0];
 						json._data = data || {};

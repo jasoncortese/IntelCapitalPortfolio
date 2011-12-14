@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.intel.icp" version="1.0">
+<name>Intel Capital</name>
+<description>
+Intel Capital, Intel Corporation's global investment and M&amp;A organization, makes equity investments in innovative technology start-ups and companies worldwide. Intel Capital invests in a broad range of companies offering hardware, software, and services targeting enterprise, mobility, health, consumer internet, digital media, semiconductor manufacturing and cleantech.
+
+With this app, you can connect directly with Intel Capital experts in various sectors around the world.
+Also browse our dynamic list of portfolio companies. 
+Get the latest scoop from Intel Capital by getting our tweets, joining us on Social Media, and signing up for our Newsletter.
+
+To Learn more about Intel Capital please visit us at www.intelcapital.com.</description> 
+<author href="http://www.intelcapital.com" email="intelcapital@intel.com">
+Intel Capital
+</author> 
+<icon src="/app_icon2.jpg" width="72" height="72" default="true" />
+</widget>
