@@ -12,7 +12,6 @@ To Learn more about Intel Capital please visit us at www.intelcapital.com.</desc
 <author href="http://www.intelcapital.com" email="intelcapital@intel.com">
 Intel Capital
 </author> 
-<icon src="/app_icon1.png" default="true" />
-<icon src="/app_icon2.jpg" width="72" height="72" />
+<icon src="/app_icon1.png" width="72" height="72" default="true" />
 <gap:splash src="splashes/splash.png">
 </widget>
