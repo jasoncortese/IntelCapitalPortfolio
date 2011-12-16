@@ -232,4 +232,66 @@ $(document).ready(function() {
 		}
 	});
 
+	(function tracking () {
+		_gaq = window._gaq || [];
+	
+		$('.port1 .reset').click(function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Reset', '']);
+		});
+		
+		$('.port1 #search').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Search', $('#searchfield')[0].value]);
+		});
+		
+		$('.port1 .sectors').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Filter: Sectors', $('select option:selected')[0].value]);
+		});
+		
+		$('.port1 .locations').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Filter: Locations', $('select option:selected')[1].value]);
+		});
+		
+		$('.port1 .funds').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Filter: Funds', $('select option:selected')[2].value]);
+		});
+		
+		$('.port1 .loadmore').click(function () {
+			_gaq.push(['_trackEvent', 'Portfolio', 'Load More', '']);
+		});
+	
+		$('.team1 .reset').click(function () {
+			_gaq.push(['_trackEvent', 'Team', 'Reset', '']);
+		});
+		
+		$('.team1 #search').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Team', 'Search', $('#searchfield')[0].value]);
+			window.location = '#';
+		});
+		
+		$('.team1 .sectors').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Team', 'Filter: Sectors', $('select option:selected')[0].value]);
+		});
+		
+		$('.team1 .locations').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Team', 'Filter: Locations', $('select option:selected')[1].value]);
+		});
+		
+		$('.team1 .roles').bind('change', function () {
+			_gaq.push(['_trackEvent', 'Team', 'Filter: Roles', $('select option:selected')[2].value]);
+		});
+		
+		$('.team1 .loadmore').click(function () {
+			_gaq.push(['_trackEvent', 'Team', 'Load More', '']);
+		});
+		
+		$('.team3 #contact').submit(function () {
+			_gaq.push(['_trackEvent', 'Team', 'Send Email', this.memberid.value]);
+		})
+		
+		$('.comm3 #signup').submit(function () {
+			_gaq.push(['_trackEvent', 'Community', 'Newsletter Subscription', '']);
+		})
+	
+	})();
+
 });
