@@ -162,7 +162,7 @@ a {
 }
 
 #searchfield {
-	width: 248px;
+	width: 244px;
 	height: 18px;
 	margin-left: -6px;
 }
@@ -215,6 +215,11 @@ a {
 	font-size: 0.9em;
 	padding-top: 3px;
 	display: block;
+}
+
+.showfilters .right {
+	margin-top: 14px;
+	margin-right: 4px;
 }
 
 .resetfilters .right {

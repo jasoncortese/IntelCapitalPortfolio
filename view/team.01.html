@@ -41,7 +41,7 @@
 				</div>
 				<div class="showfilters clearfix">
 					<p class="left"><img src="../images/button.expand.png" alt="Show Filters" width="12" height="12"/> Show Filters</p>
-					<br/>
+					<p class="right"><a  href="javascript:void(0);" title="reset" class="reset">Reset</a></p>
 				</div>
 				<div class="resetfilters clearfix">
 					<p class="left"><img src="../images/button.collapse.png" alt="Hide Filters" width="12" height="12"/> Filter By</p>
@@ -102,11 +102,18 @@
 	<script src="../project.js"></script>
 	<!-- end scripts -->
 
-	<script> // Change UA-XXXXX-X to be your site's ID
-		window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-		Modernizr.load({
-	   		load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-		});
+	<script type="text/javascript">
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-27752816-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
 	</script>
 
 	<!--[if lt IE 7 ]>
