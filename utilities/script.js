@@ -308,7 +308,14 @@ $(document).ready(function() {
 	})();
 
 });
+
 	
+	document.addEventListener('backbutton', function () {
+		document.body.innerHTML = "outside addEventListener";
+		back();
+	}, false);
+
+
 function onLoad() {
     var intervalID = window.setInterval(
       function() {
