@@ -114,8 +114,11 @@ $(document).ready(function() {
 	});
 	
 	var back = function () {
+		document.body.innerHTML = "history.back";
 		history.back(1);
+		document.body.innerHTML = "window.back";
 		window.back();
+		document.body.innerHTML = "return false";
 		return false;
 	}
 	
@@ -130,9 +133,7 @@ $(document).ready(function() {
 	
 	$(document).bind('backbutton', back, false);
 	
-	$(document).bind('backbutton', function () {document.body.innerHTML = 'jquery.bind'});
-	
-	document.addEventListener('backbutton', function () {document.body.innerHTML = 'addEventListener'}, false);
+	document.addEventListener('backbutton', back, false);
 	
 	$('#contact').bind('reset', back);
 	
@@ -302,10 +303,6 @@ $(document).ready(function() {
 
 });
 	
-	$(document).bind('backbutton', function () {document.body.innerHTML = 'outside jquery.bind'});
-	
-	document.addEventListener('backbutton', function () {document.body.innerHTML = 'outside addEventListener'}, false);
-
 function onLoad() {
     var intervalID = window.setInterval(
       function() {
