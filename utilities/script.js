@@ -114,9 +114,7 @@ $(document).ready(function() {
 	});
 	
 	var back = function () {
-		alert('history back');
 		history.back(1);
-		alert('window back');
 		window.back();
 		return false;
 	}
@@ -134,17 +132,7 @@ $(document).ready(function() {
 	
 	$('#signup').bind('reset', back);
 	
-	$(document).bind('backbutton', back);
-	
-	document.addEventListener('backbutton', function () {
-		alert('document.addEventListener');
-		document.body.innerHTML += 'document.addEventListener';
-	}, false);
-	
-	$(document).bind('backbutton', function () {
-		alert('$(document).bind');
-		document.body.innerHTML += '$(document).bind';
-	});
+	$(document).bind('backbutton', back, false);
 	
 	$('#signup').submit(function () {
 		if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email.value)) {
