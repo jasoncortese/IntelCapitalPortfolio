@@ -138,7 +138,7 @@ $(document).ready(function() {
 	
 	document.addEventListener('backbutton', function () {
 		document.body.innerHTML = "addEventListener";
-		//back();
+		window.back();
 	}, false);
 	
 	$('#contact').bind('reset', back);
