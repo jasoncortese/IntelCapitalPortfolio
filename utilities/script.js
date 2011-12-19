@@ -131,14 +131,9 @@ $(document).ready(function() {
 		$('.modal:eq(1)').toggle();
 	});
 	
-	/*$(document).bind('backbutton', function () {
-		document.body.innerHTML = "history.back";
-		back();
-	}, false);*/
+	$(document).bind('backbutton', back);
 	
-	document.addEventListener('backbutton', function () {
-		back();
-	}, false);
+	//document.addEventListener('backbutton', back, false);
 	
 	$('#contact').bind('reset', back);
 	
