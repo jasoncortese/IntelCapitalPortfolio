@@ -131,9 +131,15 @@ $(document).ready(function() {
 		$('.modal:eq(1)').toggle();
 	});
 	
-	$(document).bind('backbutton', back, false);
+	/*$(document).bind('backbutton', function () {
+		document.body.innerHTML = "history.back";
+		back();
+	}, false);*/
 	
-	document.addEventListener('backbutton', back, false);
+	document.addEventListener('backbutton', function () {
+		document.body.innerHTML = "addEventListener";
+		back();
+	}, false);
 	
 	$('#contact').bind('reset', back);
 	
