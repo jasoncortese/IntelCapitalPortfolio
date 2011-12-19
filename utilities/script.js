@@ -114,11 +114,11 @@ $(document).ready(function() {
 	});
 	
 	var back = function () {
-		document.body.innerHTML = "history.back";
-		history.back(1);
-		document.body.innerHTML = "window.back";
-		window.back();
-		document.body.innerHTML = "return false";
+		if (/android/i.test(navigator.userAgent)) {
+			window.back();
+		} else {
+			history.back(1);
+		}
 		return false;
 	}
 	
@@ -137,8 +137,7 @@ $(document).ready(function() {
 	}, false);*/
 	
 	document.addEventListener('backbutton', function () {
-		document.body.innerHTML = "addEventListener";
-		window.back();
+		back();
 	}, false);
 	
 	$('#contact').bind('reset', back);
