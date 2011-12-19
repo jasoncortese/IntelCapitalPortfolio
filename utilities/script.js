@@ -114,7 +114,9 @@ $(document).ready(function() {
 	});
 	
 	var back = function () {
+		alert('history back');
 		history.back(1);
+		alert('window back');
 		window.back();
 		return false;
 	}
