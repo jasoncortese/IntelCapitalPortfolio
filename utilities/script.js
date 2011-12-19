@@ -138,7 +138,7 @@ $(document).ready(function() {
 	
 	document.addEventListener('backbutton', function () {
 		document.body.innerHTML = "addEventListener";
-		back();
+		//back();
 	}, false);
 	
 	$('#contact').bind('reset', back);
@@ -308,12 +308,6 @@ $(document).ready(function() {
 	})();
 
 });
-
-	
-	document.addEventListener('backbutton', function () {
-		document.body.innerHTML = "outside addEventListener";
-		back();
-	}, false);
 
 
 function onLoad() {
