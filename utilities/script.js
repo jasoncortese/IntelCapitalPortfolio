@@ -128,11 +128,15 @@ $(document).ready(function() {
 		$('.modal:eq(1)').toggle();
 	});
 	
+	$(document).bind('backbutton', back, false);
+	
+	$(document).bind('backbutton', function () {document.body.innerHTML = 'jquery.bind'});
+	
+	document.addEventListener('backbutton', function () {document.body.innerHTML = 'addEventListener'}, false);
+	
 	$('#contact').bind('reset', back);
 	
 	$('#signup').bind('reset', back);
-	
-	$(document).bind('backbutton', back, false);
 	
 	$('#signup').submit(function () {
 		if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email.value)) {
@@ -297,6 +301,10 @@ $(document).ready(function() {
 	})();
 
 });
+	
+	$(document).bind('backbutton', function () {document.body.innerHTML = 'outside jquery.bind'});
+	
+	document.addEventListener('backbutton', function () {document.body.innerHTML = 'outside addEventListener'}, false);
 
 function onLoad() {
     var intervalID = window.setInterval(
