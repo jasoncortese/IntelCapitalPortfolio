@@ -113,19 +113,26 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	$('#contact').bind('reset', function () {
+	var back = function () {
 		history.back(1);
+		window.back();
 		return false;
-	});
+	}
 	
 	$('.modal:eq(0) .secondary').click(function () {
 		$('.modal:eq(0)').toggle();
-		history.back(1);
+		return back();
 	});
 	
 	$('.modal:eq(1) .secondary').click(function () {
 		$('.modal:eq(1)').toggle();
 	});
+	
+	$('#contact').bind('reset', back);
+	
+	$('#signup').bind('reset', back);
+	
+	$(document).bind('backbutton', back, false);
 	
 	$('#signup').submit(function () {
 		if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(this.email.value)) {
@@ -142,11 +149,6 @@ $(document).ready(function() {
 			title: this.title.value
 		});
 		$.when(sent).then(function () {$(document).trigger('stopActivity')});
-		return false;
-	});
-	
-	$('#signup').bind('reset', function () {
-		history.back(1);
 		return false;
 	});
 	
@@ -295,3 +297,15 @@ $(document).ready(function() {
 	})();
 
 });
+
+function onLoad() {
+    var intervalID = window.setInterval(
+      function() {
+          if (PhoneGap.available) {
+              window.clearInterval(intervalID);
+              $(document).trigger('ready');
+          }
+      },
+      500
+    );
+}
