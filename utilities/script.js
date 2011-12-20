@@ -133,8 +133,6 @@ $(document).ready(function() {
 	
 	$(document).bind('backbutton', back);
 	
-	//document.addEventListener('backbutton', back, false);
-	
 	$('#contact').bind('reset', back);
 	
 	$('#signup').bind('reset', back);
