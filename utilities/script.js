@@ -118,13 +118,14 @@ $(document).ready(function() {
 	}
 	
 	var back = function () {
-		alert(window.history.back);
-		window.history.back = window.history.back_back;
-		alert(window.history.back);
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
+			alert('1');
 			history.back(1);
+			alert('2');
+			history.back_back(1);
+			alert('done');
 		//}
 		return false;
 	}
