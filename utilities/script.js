@@ -114,9 +114,8 @@ $(document).ready(function() {
 	});
 	
 	if (/android/i.test(navigator.userAgent)) {
-		PhoneGap.addConstructor(function() {
-		    navigator.app = new App();
-		});
+		window.history.back = navigator.app.origHistoryBack;
+		alert('done');
 	}
 	
 	var back = function () {
