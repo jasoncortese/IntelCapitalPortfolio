@@ -122,8 +122,6 @@ $(document).ready(function() {
 		//	window.back();
 		//} else {
 			alert('1');
-			history.back(1);
-			alert('2');
 			history.back_back(1);
 			alert('done');
 		//}
