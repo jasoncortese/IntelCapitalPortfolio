@@ -34,7 +34,7 @@
 				});
 				break;
 			case ('portfolio.02.html') :
-				window.back = function () {history.back(1),history.back(1)};
+				window.back = function () {location.href = 'portfolio.01.html'};
 				$(document).trigger('startActivity');
 				id = location.hash.slice(1);
 				var data = portfolioModel;
