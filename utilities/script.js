@@ -113,12 +113,18 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	if (/android/i.test(navigator.userAgent)) {
+		PhoneGap.addConstructor(function() {
+		    navigator.app = new App();
+		});
+	}
+	
 	var back = function () {
-		if (/android/i.test(navigator.userAgent)) {
-			window.back();
-		} else {
+		//if (/android/i.test(navigator.userAgent)) {
+		//	window.back();
+		//} else {
 			history.back(1);
-		}
+		//}
 		return false;
 	}
 	
