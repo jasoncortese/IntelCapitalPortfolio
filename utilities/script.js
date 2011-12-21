@@ -113,14 +113,16 @@ $(document).ready(function() {
 		return false;
 	});
 	
+	if (/android/i.test(navigator.userAgent)) {
+		window.history.back_back = window.history.back;
+	}
+	
 	var back = function () {
+		window.history.back = window.history.back_back;
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
-			alert(window.history.back);
-			alert(history.back);
 			history.back(1);
-			alert('done');
 		//}
 		return false;
 	}
