@@ -34,7 +34,7 @@
 				});
 				break;
 			case ('portfolio.02.html') :
-				window.back = function () {history.back(2)};
+				window.back = function () {history.back(1),history.back(1)};
 				$(document).trigger('startActivity');
 				id = location.hash.slice(1);
 				var data = portfolioModel;
