@@ -117,16 +117,6 @@ $(document).ready(function() {
 		window.history.back_back = window.history.back;
 	}
 	
-	var back = function () {
-		//if (/android/i.test(navigator.userAgent)) {
-		//	window.back();
-		//} else {
-			document.body.click();
-			history.back(1);
-		//}
-		return false;
-	}
-	
 	$('.modal:eq(0) .secondary').click(function () {
 		$('.modal:eq(0)').toggle();
 		return back();

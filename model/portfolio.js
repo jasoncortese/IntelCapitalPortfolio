@@ -19,7 +19,7 @@
 		
 		switch (location.pathname.split('/').slice(-1)[0]) {
 			case ('portfolio.01.html') :
-				window.back = function () {history.back(1)};
+				window.back = function () {history.back(), location.replace('home.01.html')};
 				$(document).trigger('startActivity');
 				$('.loadmore')[0].style.visibility = portfolioModel.list.length % 10 == 6 && portfolioModel.list.length > 6 ? 'visible': 'hidden';
 				var data = portfolioModel;
@@ -34,8 +34,7 @@
 				});
 				break;
 			case ('portfolio.02.html') :
-				window.back = function () {alert(1); history.back(1); alert(2); setTimeout(history.back, 100); alert(3)};
-				setTimeout(function () {history.back(1)}, 1000);
+				window.back = function () {history.back(), location.replace('portfolio.01.html')};
 				$(document).trigger('startActivity');
 				id = location.hash.slice(1);
 				var data = portfolioModel;

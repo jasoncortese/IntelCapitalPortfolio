@@ -8,17 +8,17 @@
 	commModel.init = function () {
 		switch (location.pathname.split('/').slice(-1)[0]) {
 			case ('community.01.html') :
-				window.back = function () {location.replace('home.01.html')};
+				window.back = function () {history.back(), location.replace('home.01.html')};
 				var news = getNews(criteria);
 				$.when(news).then(function () {
 					app.project.viewmodel.init();
 				});
 				break;
 			case ('community.02.html') :
-				window.back = function () {location.replace('community.01.html')};
+				window.back = function () {history.back(), location.replace('community.01.html')};
 				break;
 			case ('community.03.html') :
-				window.back = function () {location.replace('community.02.html')};
+				window.back = function () {history.back(), location.replace('community.02.html')};
 				break;
 		}
 	}
