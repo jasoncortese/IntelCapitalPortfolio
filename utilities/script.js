@@ -114,8 +114,10 @@ $(document).ready(function() {
 	});
 	
 	if (/android/i.test(navigator.userAgent)) {
+		alert(window.history.back);
+		alert(navigator.app.origHistoryBack);
 		window.history.back = navigator.app.origHistoryBack;
-		alert('done');
+		alert(window.history.back);
 	}
 	
 	var back = function () {
