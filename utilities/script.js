@@ -121,7 +121,8 @@ $(document).ready(function() {
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
-			setInterval(function () {history.back()}, 100);
+			document.body.click();
+			history.back(1);
 		//}
 		return false;
 	}
