@@ -115,7 +115,7 @@ $(document).ready(function() {
 	
 	var back = function () {
 		if (/android/i.test(navigator.userAgent)) {
-			window.back();
+			history.back(2);
 		} else {
 			history.back(1);
 		}
