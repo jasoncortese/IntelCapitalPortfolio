@@ -118,7 +118,9 @@ $(document).ready(function() {
 	}
 	
 	var back = function () {
+		alert(window.history.back);
 		window.history.back = window.history.back_back;
+		alert(window.history.back);
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
