@@ -123,6 +123,8 @@ $(document).ready(function() {
 		//} else {
 			alert('1');
 			history.back_back(1);
+			history.back_back(1);
+			setTimeout(function () {history.back()}, 1000);
 			alert('done');
 		//}
 		return false;
