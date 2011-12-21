@@ -121,12 +121,7 @@ $(document).ready(function() {
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
-			alert('1');
-			history.back_back(1);
-			history.back_back(1);
-			setTimeout(function () {history.back()}, 1000);
-			setTimeout(function () {history.back()}, 1000);
-			alert('done');
+			setInterval(function () {history.back()}, 100);
 		//}
 		return false;
 	}
