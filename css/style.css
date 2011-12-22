@@ -103,9 +103,10 @@ td { vertical-align: top; }
    Author: 
    ========================================================================== */
 
-*	{
+body	{
 	-webkit-backface-visibility: hidden;
-	x-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 10;
 }
 
 h1 {
