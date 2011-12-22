@@ -126,6 +126,40 @@
 		}
 	}
 	
+/*	databaseStorage = new function () {
+		var saved = window.openDatabase('mydata', '1.0', 'dataDB');
+		var populateDB = function (tx) {tx.executeSql('Blog TABLE IF EXISTS POSTS')};
+		tx.executeSql('CREATE TABLE IF NOT EXISTS SERVICES (
+			id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+			name varchar(255) NOT NULL,
+			data TEXT
+		)');
+		tx.exectuteSql('SELECT * FROM POSTS WHERE name MATCHES ' + name, [], qrySuccessCB, errorCB);
+		var qrySuccessCB = function (tx, results) {
+			results.rows.item(i).title;
+		}
+		this.getItem = function (name) {
+			var saved = /\{|\}/.test(window.name) ? JSON.parse(window.name) : {};
+			return saved[name] || '{}';
+		}
+		this.setItem = function (name, data) {
+			saved.transaction(populateDB, errorCB, successCB);
+			tx.executeSql('INSERT INTO POSTS (
+				title, decription
+			) VALUES (?, ?)', ['title', 'desc']);
+			return saved[name];
+		}
+		this.removeItem = function (name) {
+			var saved = /\{|\}/.test(window.name) ? JSON.parse(window.name) : {};
+			delete saved[name];
+			window.name = JSON.stringify(saved);
+			return saved[name];	
+		}
+		this.clear = function () {
+			window.name = '';
+		}
+	}*/
+	
 	savedData = {};
 	
 	window.storage = namedStorage;

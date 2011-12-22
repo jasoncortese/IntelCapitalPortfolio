@@ -37,7 +37,10 @@
 		}
 	};
 	
-	$(document).ready(model.init);
+	$(document).ready(function () {
+		$(document).bind('deviceready', model.init);
+		if (!PhoneGap.available) $(document).trigger('deviceready');
+	});
 
 })();
 

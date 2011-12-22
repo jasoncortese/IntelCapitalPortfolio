@@ -119,12 +119,11 @@ $(document).ready(function() {
 	alert(window.name);
 	
 	var back = function () {
-		//if (/android/i.test(navigator.userAgent)) {
-		//	window.back();
-		//} else {
-			alert(window.name);
+		if (/android/i.test(navigator.userAgent)) {
 			window.back();
-		//}
+		} else {
+			history.back();
+		}
 		return false;
 	}
 	
