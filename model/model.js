@@ -8,8 +8,8 @@
 			case ('portfolio') :
 				document.criteria = {indexStartValue: 0};
 				window.criteria = document.criteria;
-				services.clearSavedData('bio', 'criteria');
-				services.clearSavedData('bio', 'list', []);
+				//services.clearSavedData('bio', 'criteria');
+				//services.clearSavedData('bio', 'list', []);
 				app.project.model.portfolio.init();
 				break;
 			case ('team') :
