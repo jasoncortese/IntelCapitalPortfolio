@@ -29,6 +29,8 @@
 				var locations = data.locations.length ? data.locations : getLocations();
 				var funds = data.funds.length ? data.funds : getFunds();
 				alert('wait');
+				$(document).body.style.zIndex = '20';
+				alert('wait');
 				$.when(list, sectors, locations, funds).then(function () {
 					app.project.viewmodel.init();
 					$(document).trigger('stopActivity');

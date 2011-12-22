@@ -37,7 +37,7 @@
 		}
 	};
 	
-	//$(document).ready(model.init);
+	$(document).ready(model.init);
 
 })();
 
