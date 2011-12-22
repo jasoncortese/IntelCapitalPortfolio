@@ -8,6 +8,5 @@
 
 Ti.include(
 	'../utilities/constants.js',
-	'../utilities/plugins.js',
-	'../utilities/services.js'
+	'../utilities/plugins.js'
 );
