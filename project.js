@@ -8,8 +8,10 @@ var app = window.app || {};
 	
 	Ti = window;
 	Ti.App = document;
+	var ct = 0;
 	Ti.include = function () {
 		for (var i=0; i < arguments.length; ++i) {
+			alert(++ct);
 			document.write('<script src="' + arguments[i] + '"><\/script>');
 		}
 	}
