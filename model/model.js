@@ -2,10 +2,11 @@
 	var services = app.project.utilities.services;
 
 	var model = app.project.model = {};
-	
+	alert(0.0);
 	model.init = function () {
 		switch (location.pathname.split('/').slice(-1)[0].split('.')[0]) {
 			case ('portfolio') :
+	alert(0.1);
 				document.criteria = {indexStartValue: 0};
 				window.criteria = document.criteria;
 				services.clearSavedData('bio', 'criteria');

@@ -1,7 +1,9 @@
 (function() {
 	var viewmodel = app.project.viewmodel = {};
 	
+	alert(3.0);
 	viewmodel.init = function () {
+	alert(3.1);
 		switch (location.pathname.split('/').slice(-1)[0].split('.')[0]) {
 			case ('portfolio') :
 				app.project.viewmodel.portfolio.init();
