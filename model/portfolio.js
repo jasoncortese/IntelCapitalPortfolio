@@ -11,16 +11,16 @@
 	
 	portfolioModel.init = function () {
 
-		//var savedPortfolio = services.getSavedData('portfolio');
-		//for (x in savedPortfolio) portfolioModel[x] = savedPortfolio[x];
+		var savedPortfolio = services.getSavedData('portfolio');
+		for (x in savedPortfolio) portfolioModel[x] = savedPortfolio[x];
 		
-		//var savedDetails = services.getSavedData('portfolio_details');
-		//for (x in savedDetails) portfolioModel.details[x] = savedDetails[x];
+		var savedDetails = services.getSavedData('portfolio_details');
+		for (x in savedDetails) portfolioModel.details[x] = savedDetails[x];
 		
 		switch (location.pathname.split('/').slice(-1)[0]) {
 			case ('portfolio.01.html') :
 				window.back = function () {location.replace('home.01.html')};
-				//$(document).trigger('startActivity');
+				$(document).trigger('startActivity');
 				$('.loadmore')[0].style.visibility = portfolioModel.list.length % 10 == 6 && portfolioModel.list.length > 6 ? 'visible': 'hidden';
 				var data = portfolioModel;
 				for (x in data.criteria) if (!/Index/.test(x) && data.criteria[x] != '0') criteria[x] = data.criteria[x];
@@ -28,9 +28,7 @@
 				var sectors = data.sectors.length ? data.sectors : getSectors();
 				var locations = data.locations.length ? data.locations : getLocations();
 				var funds = data.funds.length ? data.funds : getFunds();
-				alert('here');
 				$.when(list, sectors, locations, funds).then(function () {
-					alert('there');
 					app.project.viewmodel.init();
 					$(document).trigger('stopActivity');
 				});

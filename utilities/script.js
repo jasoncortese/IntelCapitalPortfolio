@@ -297,19 +297,6 @@ $(document).ready(function() {
 			_gaq.push(['_trackEvent', 'Community', 'Newsletter Subscription', '']);
 		})
 	
-	})();
+	});
 
 });
-
-
-function onLoad() {
-    var intervalID = window.setInterval(
-      function() {
-          if (PhoneGap.available) {
-              window.clearInterval(intervalID);
-              $(document).trigger('ready');
-          }
-      },
-      500
-    );
-}
