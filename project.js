@@ -19,9 +19,12 @@ var app = window.app || {};
 	}
 })();
 
-Ti.include(
-	'../utilities/utilities.js',
-	'../model/model.js',
-	'../view/view.js',
-	'../viewmodel/viewmodel.js'
-);
+alert(0);
+Ti.include('../utilities/utilities.js');
+alert(1);
+Ti.include('../model/model.js');
+alert(2);
+Ti.include('../view/view.js');
+alert(3);
+Ti.include('../viewmodel/viewmodel.js');
+alert(4);
