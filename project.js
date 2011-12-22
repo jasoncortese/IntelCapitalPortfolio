@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-$(function() {
+$(document).ready(function() {
 	var project = app.project = {};
 	
 	project.init = function () {
