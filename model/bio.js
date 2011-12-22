@@ -19,7 +19,7 @@
 
 		switch (location.pathname.split('/').slice(-1)[0]) {
 			case ('team.01.html') :
-				window.back = function () {history.back(), location.replace('home.01.html')};
+				window.back = function () {location.replace('home.01.html')};
 				$(document).trigger('startActivity');
 				$('.loadmore')[0].style.visibility = bioModel.list.length % 10 == 6 && bioModel.list.length > 6 ? 'visible': 'hidden';
 				var data = bioModel;
@@ -34,7 +34,7 @@
 				});
 				break;
 			case ('team.02.html') :
-				window.back = function () {history.back(), location.replace('team.01.html')};
+				window.back = function () {location.replace('team.01.html')};
 				$(document).trigger('startActivity');
 				id = location.hash.slice(1);
 				var data = bioModel;
@@ -45,7 +45,7 @@
 				});
 				break;
 			case ('team.03.html') :
-				window.back = function () {history.back(), location.replace('team.02.html#' + $('.memberid')[0].value)};
+				window.back = function () {location.replace('team.02.html#' + $('.memberid')[0].value)};
 				$(document).trigger('startActivity');
 				id = location.hash.slice(1);
 				var data = bioModel;

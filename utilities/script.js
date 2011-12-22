@@ -114,6 +114,7 @@ $(document).ready(function() {
 	});
 	
 	var back = function () {
+		alert(navigator.userAgent);
 		if (/android/i.test(navigator.userAgent)) {
 			window.back();
 		} else {
