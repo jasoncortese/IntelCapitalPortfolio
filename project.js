@@ -23,9 +23,9 @@ $(function() {
 })();
 
 Ti.include(
-	'file:///android_asset/utilities/utilities.js',
-	'file:///android_asset/model/model.js',
-	'file:///android_asset/view/view.js',
-	'file:///android_asset/viewmodel/viewmodel.js'
+	'../utilities/utilities.js',
+	'../model/model.js',
+	'../view/view.js',
+	'../viewmodel/viewmodel.js'
 );
 
