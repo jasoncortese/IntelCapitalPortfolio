@@ -10,6 +10,8 @@ var app = window.app || {};
 	Ti.App = document;
 	var ct = 0;
 	Ti.include = function () {
+		this.setIntegerProperty("loadUrlTimeoutValue", 30000);
+		
 		for (var i=0; i < arguments.length; ++i) {
 			alert(++ct);
 			document.write('<script src="' + arguments[i] + '"><\/script>');
@@ -19,6 +21,7 @@ var app = window.app || {};
 	Modernizr.load = Modernizr.load || function (obj) {
 		$.getScript(obj.load);
 	}
+	
 })();
 
 Ti.include(
