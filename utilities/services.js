@@ -171,7 +171,7 @@
 	
 	savedData = {};
 	
-	window.storage = namedStorage;
+	window.storage = cookieStorage;
 	
 	services.getSavedData = function (name, param) {
 		if (!savedData[name]) savedData[name] = {};
