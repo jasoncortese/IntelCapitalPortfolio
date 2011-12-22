@@ -6,6 +6,7 @@
 	model.init = function () {
 		switch (location.pathname.split('/').slice(-1)[0].split('.')[0]) {
 			case ('portfolio') :
+				Ti.include('../model/portfolio.js');
 				document.criteria = {indexStartValue: 0};
 				window.criteria = document.criteria;
 				services.clearSavedData('bio', 'criteria');
@@ -40,9 +41,3 @@
 	setTimeout(function () {$(document).ready(model.init)}, 1000);
 
 })();
-
-Ti.include(
-	'../model/portfolio.js',
-	'../model/bio.js',
-	'../model/community.js'
-);

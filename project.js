@@ -18,3 +18,10 @@ var app = window.app || {};
 		$.getScript(obj.load);
 	}
 })();
+
+Ti.include(
+	'../utilities/utilities.js',
+	'../model/model.js',
+	'../view/view.js',
+	'../viewmodel/viewmodel.js'
+);
