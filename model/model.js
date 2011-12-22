@@ -37,12 +37,12 @@
 		}
 	};
 	
-	$(document).ready(model.init);
+	model.init;
 
 })();
 
 Ti.include(
 	'../model/portfolio.js',
 	'../model/bio.js',
-	'../community.js'
+	'../model/community.js'
 );
