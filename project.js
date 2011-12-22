@@ -1,8 +1,6 @@
 var app = window.app || {};
 
-try {this.errorOut()} catch (e) {};
-		
-(function() {
+$(function() {
 	var project = app.project = {};
 	
 	project.init = function () {
@@ -20,11 +18,10 @@ try {this.errorOut()} catch (e) {};
 		$.getScript(obj.load);
 	}
 	
-})();
-
-Ti.include(
-	'../utilities/utilities.js',
-	'../model/model.js',
-	'../view/view.js',
-	'../viewmodel/viewmodel.js'
-);
+	Ti.include(
+		'../utilities/utilities.js',
+		'../model/model.js',
+		'../view/view.js',
+		'../viewmodel/viewmodel.js'
+	);
+});
