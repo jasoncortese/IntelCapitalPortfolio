@@ -15,10 +15,9 @@
 		
 		var savedDetails = services.getSavedData('portfolio_details');
 		for (x in savedDetails) portfolioModel.details[x] = savedDetails[x];
-		alert(1.0);
+		
 		switch (location.pathname.split('/').slice(-1)[0]) {
 			case ('portfolio.01.html') :
-			alert(1.1);
 				window.back = function () {location.replace('home.01.html')};
 				$(document).trigger('startActivity');
 				$('.loadmore')[0].style.visibility = portfolioModel.list.length % 10 == 6 && portfolioModel.list.length > 6 ? 'visible': 'hidden';

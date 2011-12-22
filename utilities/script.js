@@ -1,8 +1,5 @@
-	alert(2.0);
-
 $(document).ready(function() {
-		alert(2.1);
-
+	
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}
