@@ -133,9 +133,9 @@
 			var str = '';
 			for (var i=0; i < 40; ++i) {
 				var cookie = document.cookie.split('storage' + i + '=');
-				if (cookie[1]) str += unescape(cookie[1].split(';')[0]);
+				if (cookie[1]) str += cookie[1].split(';')[0];
 			} 
-			return str;
+			return unescape(str);
 		}
 		var saveCookie = function (str, exp) {
 			var str = escape(str);
