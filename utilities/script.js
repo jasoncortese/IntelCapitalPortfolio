@@ -116,12 +116,14 @@ $(document).ready(function() {
 	if (/android/i.test(navigator.userAgent)) {
 		window.history.back_back = window.history.back;
 	}
+	alert(window.name);
 	
 	var back = function () {
 		//if (/android/i.test(navigator.userAgent)) {
 		//	window.back();
 		//} else {
-			history.go(-1);
+			alert(window.name);
+			window.back();
 		//}
 		return false;
 	}
