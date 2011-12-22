@@ -1,6 +1,6 @@
 var app = window.app || {};
 
-$(document).ready(function() {
+$(function() {
 	var project = app.project = {};
 	
 	project.init = function () {
@@ -18,6 +18,9 @@ $(document).ready(function() {
 		$.getScript(obj.load);
 	}
 	
+})();
+
+$(document).ready(function () {
 	Ti.include(
 		'../utilities/utilities.js',
 		'../model/model.js',
