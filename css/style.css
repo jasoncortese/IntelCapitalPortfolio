@@ -103,6 +103,11 @@ td { vertical-align: top; }
    Author: 
    ========================================================================== */
 
+*	{
+	-webkit-backface-visibility: hidden;
+	x-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 h1 {
 	font-family: Helvetica, Arial;
 	font-size: 24px;
