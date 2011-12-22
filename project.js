@@ -1,5 +1,7 @@
 var app = window.app || {};
 
+try {this.errorOut()} catch (e) {};
+		
 (function() {
 	var project = app.project = {};
 	
@@ -9,8 +11,6 @@ var app = window.app || {};
 	Ti = window;
 	Ti.App = document;
 	Ti.include = function () {
-		try {this.errorOut()} catch (e) {};
-		
 		for (var i=0; i < arguments.length; ++i) {
 			document.write('<script src="' + arguments[i] + '"><\/script>');
 		}
