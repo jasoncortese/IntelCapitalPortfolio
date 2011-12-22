@@ -37,12 +37,12 @@
 		}
 	};
 	
-	setTimeout(function () {$(document).ready(model.init)}, 1000);
+	$(document).ready(model.init);
 
 })();
 
 Ti.include(
-	'../model/portfolio.js',
-	'../model/bio.js',
-	'../model/community.js'
+	'file:///android_asset/www/model/portfolio.js',
+	'file:///android_asset/www/model/bio.js',
+	'file:///android_asset/www/model/community.js'
 );
