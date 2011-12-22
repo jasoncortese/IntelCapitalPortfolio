@@ -126,43 +126,52 @@
 		}
 	}
 	
-/*	databaseStorage = new function () {
-		var saved = window.openDatabase('mydata', '1.0', 'dataDB');
-		var populateDB = function (tx) {tx.executeSql('Blog TABLE IF EXISTS POSTS')};
-		tx.executeSql('CREATE TABLE IF NOT EXISTS SERVICES (
-			id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-			name varchar(255) NOT NULL,
-			data TEXT
-		)');
-		tx.exectuteSql('SELECT * FROM POSTS WHERE name MATCHES ' + name, [], qrySuccessCB, errorCB);
-		var qrySuccessCB = function (tx, results) {
-			results.rows.item(i).title;
+	cookieStorage = new function () {
+		var now = (new Date()).getTime();
+		var later = (new Date(now + 86400000)).toUTCString();
+		var loadCookie = function () {
+			var str = '';
+			for (var i=0; i < 40; ++i) {
+				var cookie = document.cookie.split('storage' + i + '=');
+				if (cookie[1]) str += unescape(cookie[1].split(';')[0]);
+			} 
+			return str;
 		}
+		var saveCookie = function (str, exp) {
+			var str = escape(str);
+			for (var i=0; i < 40; ++i) {
+				var chunk = str.substr(i * 4000, 4000);
+				document.cookie = 'storage' + i + '=' + chunk + ';expires=' + exp + ';path=/;';
+			} 
+		}
+		
 		this.getItem = function (name) {
-			var saved = /\{|\}/.test(window.name) ? JSON.parse(window.name) : {};
+			var cookie = loadCookie();
+			var saved = /\{|\}/.test(cookie) ? JSON.parse(cookie) : {};
 			return saved[name] || '{}';
 		}
 		this.setItem = function (name, data) {
-			saved.transaction(populateDB, errorCB, successCB);
-			tx.executeSql('INSERT INTO POSTS (
-				title, decription
-			) VALUES (?, ?)', ['title', 'desc']);
+			var cookie = loadCookie();
+			var saved = /\{|\}/.test(cookie) ? JSON.parse(cookie) : {};
+			saved[name] = data;
+			saveCookie(JSON.stringify(saved), later);
 			return saved[name];
 		}
 		this.removeItem = function (name) {
-			var saved = /\{|\}/.test(window.name) ? JSON.parse(window.name) : {};
+			var cookie = loadCookie();
+			var saved = /\{|\}/.test(cookie) ? JSON.parse(cookie) : {};
 			delete saved[name];
-			window.name = JSON.stringify(saved);
+			saveCookie(JSON.stringify(saved), later);
 			return saved[name];	
 		}
 		this.clear = function () {
-			window.name = '';
+			saveCookie('', now);
 		}
-	}*/
+	}
 	
 	savedData = {};
 	
-	window.storage = namedStorage;
+	window.storage = cookieStorage;
 	
 	services.getSavedData = function (name, param) {
 		if (!savedData[name]) savedData[name] = {};

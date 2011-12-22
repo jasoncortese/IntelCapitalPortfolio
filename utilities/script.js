@@ -113,11 +113,6 @@ $(document).ready(function() {
 		return false;
 	});
 	
-	if (/android/i.test(navigator.userAgent)) {
-		window.history.back_back = window.history.back;
-	}
-	alert(window.name);
-	
 	var back = function () {
 		if (/android/i.test(navigator.userAgent)) {
 			window.back();

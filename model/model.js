@@ -39,7 +39,7 @@
 	
 	$(document).ready(function () {
 		$(document).bind('deviceready', model.init);
-		if (!PhoneGap.available) $(document).trigger('deviceready');
+		if (!window.PhoneGap) $(document).trigger('deviceready');
 	});
 
 })();
