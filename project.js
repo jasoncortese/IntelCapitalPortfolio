@@ -1,7 +1,5 @@
 var app = window.app || {};
 
-try {this.errorOut()} catch (e) {};
-		
 (function() {
 	var project = app.project = {};
 	
