@@ -1,8 +1,7 @@
 $(document).ready(function() {
 	
 	$('a').click(function () {
-		alert(this.href);
-		window.open(this.href);
+		navigator.app.loadUrl(this.href);
 		return false;
 	});
 	 
