@@ -1,7 +1,8 @@
 $(document).ready(function() {
 	
 	$('a').click(function () {
-		location.replace(this.href); return false;
+		window.open(this.href);
+		return false;
 	});
 	 
 	window.onload = function () {
