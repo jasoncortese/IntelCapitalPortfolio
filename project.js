@@ -1,6 +1,8 @@
 var app = window.app || {};
 
-$(function() {
+try {this.errorOut()} catch (e) {};
+		
+(function() {
 	var project = app.project = {};
 	
 	project.init = function () {
@@ -28,4 +30,3 @@ Ti.include(
 	'../view/view.js',
 	'../viewmodel/viewmodel.js'
 );
-
