@@ -220,7 +220,7 @@
 	services.init = function () {
 	};
 	
-	$(function () {
+	/*if (!window.pathname) $(function () {
 		$('body').append('<div class="activity"><img src="../images/loading.gif"/></div>');
 		
 		$(window).bind('scroll', function () {
@@ -241,6 +241,6 @@
 				setTimeout(function () {$('.activity')[0].style.display = 'none'}, 1000);
 			}
 		})
-	});
+	});*/
 		
 })();

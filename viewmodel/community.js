@@ -5,7 +5,8 @@
 	var id = 0;
 	
 	commViewModel.init = function () {
-		switch (location.pathname.split('/').slice(-1)[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0]) {
 			case ('community.01.html') :
 				$('.tableview .template').getmpl(commModel.news);
 				commViewModel.init.news = $('.tableview .template').getset(commModel.news, commViewModel['commNews']);

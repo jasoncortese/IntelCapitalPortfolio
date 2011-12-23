@@ -4,7 +4,8 @@
 	var model = app.project.model = {};
 	
 	model.init = function () {
-		switch (location.pathname.split('/').slice(-1)[0].split('.')[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0].split('.')[0]) {
 			case ('portfolio') :
 				document.criteria = {indexStartValue: 0};
 				window.criteria = document.criteria;

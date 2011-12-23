@@ -5,7 +5,8 @@
 	var id = 0;
 	
 	bioViewModel.init = function () {
-		switch (location.pathname.split('/').slice(-1)[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0]) {
 			case ('team.01.html') :
 				$('.tableview .template').getmpl(bioModel.list);
 				$('.sectors .sector').getmpl(bioModel.sectors);

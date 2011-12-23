@@ -6,7 +6,8 @@
 	};
 		
 	commModel.init = function () {
-		switch (location.pathname.split('/').slice(-1)[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0]) {
 			case ('community.01.html') :
 				window.back = function () {location.replace('home.01.html')};
 				var news = getNews(criteria);

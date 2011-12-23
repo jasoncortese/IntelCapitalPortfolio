@@ -1,7 +1,16 @@
 $(document).ready(function() {
 	
 	$('a').click(function () {
-		document.write('<meta http-equiv="refresh" content="0;' + arguments[i] + '"/>');
+		var href = this.href;
+		$('body').load(this.href + ' body', function (data) {
+			var bodyStart = data.toLowerCase().indexOf('<body>');
+			var bodyEnd = data.toLowerCase().indexOf('<\/body>');
+			var html = data.slice(bodyStart+6, bodyEnd);
+			html = html.replace(/(<|<\/)script/g, '<noscript');
+			$('body').html(html);
+			window.pathname += href;
+			app.project.model.init();
+		});
 		return false;
 	});
 	 

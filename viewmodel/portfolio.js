@@ -5,7 +5,8 @@
 	var id = 0;
 	
 	portfolioViewModel.init = function () {
-		switch (location.pathname.split('/').slice(-1)[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0]) {
 			case ('portfolio.01.html') :
 				$('.tableview .template').getmpl(portfolioModel.list);
 				$('.sectors .sector').getmpl(portfolioModel.sectors);

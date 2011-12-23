@@ -16,7 +16,8 @@
 		var savedDetails = services.getSavedData('portfolio_details');
 		for (x in savedDetails) portfolioModel.details[x] = savedDetails[x];
 		
-		switch (location.pathname.split('/').slice(-1)[0]) {
+		var pathname = window.pathname || location.pathname;
+		switch (pathname.split('/').slice(-1)[0]) {
 			case ('portfolio.01.html') :
 				window.back = function () {location.replace('home.01.html')};
 				$(document).trigger('startActivity');
