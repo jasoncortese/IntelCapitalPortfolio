@@ -1,18 +1,18 @@
 $(document).ready(function() {
 	
 	$('a').click(function () {
-		var href = this.href;
+		/*var href = this.href;
 		$('body').load(this.href + ' body', function (data) {
 			var bodyStart = data.toLowerCase().indexOf('<body>');
 			var bodyEnd = data.toLowerCase().indexOf('<\/body>');
 			var html = data.slice(bodyStart+6, bodyEnd);
 			html = html.replace(/(<|<\/)script/g, '<noscript');
 			$('body').html(html);
-			//window.pathname += href;
-			//app.project.model.init();
-			location.pathname = location.pathname.replace(/\w*\.\w*\.\w*$/, href.replace(/^.*\//, ''));
-		});
-		return false;
+			window.pathname += href;
+			app.project.model.init();
+		});*/
+		$('body').load('about:blank');
+		//return false;
 	});
 	 
 	window.onload = function () {
