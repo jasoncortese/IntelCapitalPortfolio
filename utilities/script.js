@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	
-	$('a').click(function () {
+	$('a[href$=html]').click(function () {
 		var href = this.href;
 		$('body').load(this.href + ' body', function (data) {
 			var bodyStart = data.toLowerCase().indexOf('<body>');
 			var bodyEnd = data.toLowerCase().indexOf('<\/body>');
 			var html = data.slice(bodyStart+6, bodyEnd);
-			html = html.replace(/(<|<\/)script/g, '<noscript');
+			html = html.replace(/(<|<\/)script/g, '$1noscript');
 			$('body').html(html);
 			location.href = href;
 		});
