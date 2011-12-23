@@ -10,6 +10,7 @@ $(document).ready(function() {
 			$('body').html(html);
 			window.pathname += href;
 			app.project.model.init();
+			location.pathname = location.pathname.replace(/\w*\.\w*\.\w*$/, href.replace(/^.*\//, ''));
 		});
 		return false;
 	});
