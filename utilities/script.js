@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	
+	alert(1);
+	document.body.innerHTML = document.body.innerHTML;
+	alert(2);
+	
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}
