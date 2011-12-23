@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	
 	$('a[href*=html]').click(function () {
+		alert(this.href);
 		var href = this.href;
 		$('body').load(this.href + ' body', function (data) {
 			var bodyStart = data.toLowerCase().indexOf('<body>');
