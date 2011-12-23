@@ -1,10 +1,6 @@
 $(document).ready(function() {
 	
-	$('a').click(function () {
-		navigator.app.loadUrl(this.href);
-		return false;
-	});
-	 
+	alert(3);
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}
