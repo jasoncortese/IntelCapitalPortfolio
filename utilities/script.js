@@ -1,9 +1,10 @@
 $(document).ready(function() {
 	
-	alert(1);
-	document.body.innerHTML = document.body.innerHTML;
-	alert(2);
-	
+	$('a').click(function () {
+		document.write('<meta http-equiv="refresh" content="0;' + arguments[i] + '"/>');
+		return false;
+	});
+	 
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}
