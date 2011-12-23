@@ -1,5 +1,9 @@
 $(document).ready(function() {
 	
+	$('a').click(function () {
+		location.replace(this.href); return false;
+	});
+	 
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}
