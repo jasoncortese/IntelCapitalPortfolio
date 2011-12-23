@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	
-	alert(3);
 	window.onload = function () {
 		window.scrollTo(0, 0);
 	}

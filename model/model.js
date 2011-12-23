@@ -42,7 +42,7 @@
 })();
 
 Ti.include(
-	'../model/portfolio.js',
-	'../model/bio.js',
-	'../model/community.js'
+	'file:///android_asset/www/model/portfolio.js',
+	'file:///android_asset/www/model/bio.js',
+	'file:///android_asset/www/model/community.js'
 );
