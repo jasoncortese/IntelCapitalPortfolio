@@ -23,8 +23,8 @@ var app = window.app || {};
 })();
 
 Ti.include(
-	'file:///android_asset/www/utilities/utilities.js',
-	'file:///android_asset/www/model/model.js',
-	'file:///android_asset/www/view/view.js',
-	'file:///android_asset/www/viewmodel/viewmodel.js'
+	'../utilities/utilities.js',
+	'../model/model.js',
+	'../view/view.js',
+	'../viewmodel/viewmodel.js'
 );
