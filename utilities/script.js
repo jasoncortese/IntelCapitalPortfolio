@@ -8,8 +8,8 @@ $(document).ready(function() {
 			var html = data.slice(bodyStart+6, bodyEnd);
 			html = html.replace(/(<|<\/)script/g, '<noscript');
 			$('body').html(html);
-			window.pathname += href;
-			app.project.model.init();
+			//window.pathname += href;
+			//app.project.model.init();
 			location.pathname = location.pathname.replace(/\w*\.\w*\.\w*$/, href.replace(/^.*\//, ''));
 		});
 		return false;
