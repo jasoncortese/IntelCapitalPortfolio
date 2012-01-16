@@ -25,6 +25,5 @@ var app = window.app || {};
 Ti.include(
 	'../utilities/utilities.js',
 	'../model/model.js',
-	'../view/view.js',
 	'../viewmodel/viewmodel.js'
 );

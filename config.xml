@@ -14,4 +14,5 @@ Intel Capital
 </author> 
 <icon src="/assets/icon-android-72.png" width="72" height="72" />
 <icon src="/assets/icon-iphone-72.png" width="72" height="72" />
+  <gap:splash src="/assets/default.png"/>
 </widget>

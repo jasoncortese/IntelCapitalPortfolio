@@ -170,9 +170,9 @@ $(document).ready(function() {
 	
 	$('.port1 .loadmore a').click(function () {
 		var loadmore = this;
-		loadmore.innerHTML = 'Loading...';
 		$(document).trigger('startActivity');
-		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
+//		loadmore.innerHTML = 'Loading...';
+//		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
 	});
 	
 	$('.port1 .loadmore').click(function () {
@@ -188,35 +188,34 @@ $(document).ready(function() {
 	
 	$('.team1 .loadmore a').click(function () {
 		var loadmore = this;
-		loadmore.innerHTML = 'Loading...';
 		$(document).trigger('startActivity');
-		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
+//		loadmore.innerHTML = 'Loading...';
+//		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
 	});
 	
 	$('.team1 .loadmore').click(function () {
 		var loadmore = this;
-		loadmore.innerHTML = 'Loading...';
 		$(document).trigger('startActivity');
 		criteria = window.criteria || {};
 		criteria.indexStartValue = app.project.model.bio.list.length +1; 
 		var loaded = app.project.model.bio.getList(criteria);
 		$.when(loaded).then(function () {
 			$(document).trigger('stopActivity');
-			loadmore.innerHTML = 'Load More';
+//		loadmore.innerHTML = 'Loading...';
+//			loadmore.innerHTML = 'Load More';
 		});
 		return false;
 	});
 	
 	$('.comm1 .loadmore a').click(function () {
 		var loadmore = this;
-		loadmore.innerHTML = 'Loading...';
 		$(document).trigger('startActivity');
-		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
+//		loadmore.innerHTML = 'Loading...';
+//		setTimeout(function () {loadmore.innerHTML = 'Load More'}, 3000);
 	});
 	
 	$('.comm1 .loadmore').click(function () {
 		var loadmore = this;
-		loadmore.innerHTML = 'Loading...';
 		$(document).trigger('startActivity');
 		criteria = window.criteria || {};
 		criteria.page = criteria.page || 1;
@@ -224,7 +223,8 @@ $(document).ready(function() {
 		var loaded = app.project.model.community.getNews(criteria);
 		$.when(loaded).then(function () {
 			$(document).trigger('stopActivity');
-			loadmore.innerHTML = 'Load More';
+//		loadmore.innerHTML = 'Loading...';
+//			loadmore.innerHTML = 'Load More';
 		});
 		return false;
 	});

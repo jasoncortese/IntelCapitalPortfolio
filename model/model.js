@@ -1,9 +1,9 @@
 (function() {
-	var services = app.project.utilities.services;
-
+    var services = app.project.utilities.services;
 	var model = app.project.model = {};
 	
 	model.init = function () {
+	    var services = app.project.utilities.services;
 		var pathname = window.pathname || location.pathname;
 		switch (pathname.split('/').slice(-1)[0].split('.')[0]) {
 			case ('portfolio') :
