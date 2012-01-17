@@ -231,14 +231,14 @@
             $('.activity')[0].style.top = window.pageYOffset + 'px';
             $('.activity')[0].style.display = 'block';
             var lmb = $('#loadMoreButton');
-            lmb && lmb.html('Load More');
+            if (lmb) lmb.html('Loading...');
             setTimeout(function () { $(document).trigger('stopActivity') }, 15000);
         })
 
         $(document).bind('stopActivity', function () {
 
             var lmb = $('#loadMoreButton');
-            lmb && setTimeout(function () { lmb.html('Load More'); });
+            if (lmb) setTimeout(function () { lmb.html('Load More'); });
             setTimeout(function () { $('form').toggle(), $('form').toggle() }, 1000);
             if (/android/i.test(navigator.userAgent)) {
                 setTimeout(function () { $('.activity')[0].style.display = 'none' }, 1000);
